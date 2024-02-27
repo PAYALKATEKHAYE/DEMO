@@ -72,4 +72,7 @@ export class ContactComponent implements OnInit {
   loginUser() {
     console.warn(this.emailForm.value);
   }
+
+
+  
 }
