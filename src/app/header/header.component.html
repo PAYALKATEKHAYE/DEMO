@@ -1,0 +1,88 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a routerLink="/home" class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a routerLink="/about" class="nav-link scrollto" href="#about">About</a></li>
+        <li><a routerLink="/services" class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a routerLink="/portfolio" class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
+        <li><a routerLink="/team" class="nav-link scrollto" href="#team">Team</a></li>
+        <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <ul class="dropdown-active">
+            <li><a href="#">Drop Down 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="#">Deep Drop Down 1</a></li>
+                <li><a href="#">Deep Drop Down 2</a></li>
+                <li><a href="#">Deep Drop Down 3</a></li>
+                <li><a href="#">Deep Drop Down 4</a></li>
+                <li><a href="#">Deep Drop Down 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Drop Down 2</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+            <li><a href="#">Drop Down 4</a></li>
+          </ul>
+        </li>
+
+        <li><a routerLink="/contact" class="nav-link scrollto">Contact</a></li>
+        <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle" (click)="isToggleNav()"></i>
+    </nav>
+
+  </div>
+  <div *ngIf="isOpen">
+    <nav id="navbar" class="navbar navbar-mobile">
+      <ul>
+        <li (click)="isToggleNav()"><a routerLink="/home" class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li (click)="isToggleNav()"><a routerLink="/about" class="nav-link scrollto" href="#about">About</a></li>
+        <li (click)="isToggleNav()"><a routerLink="/services" class="nav-link scrollto" href="#services">Services</a>
+        </li>
+        <li (click)="isToggleNav()"><a routerLink="/portfolio" class="nav-link   scrollto"
+            href="#portfolio">Portfolio</a></li>
+        <li (click)="isToggleNav()"><a routerLink="/team" class="nav-link scrollto" href="#team">Team</a></li>
+        <li><a href="#" (click)="toggle()"><span class="dropdown-active">Drop Down</span> <i
+              class="bi bi-chevron-down"></i></a>
+
+          <div class="dropdown-container">
+            <div *ngIf="display">
+        <li (click)="isToggleNav()"><a href="#">Drop Down 1</a></li>
+        <div>
+
+          <li class="dropdown"><a href="#" (click)="deep()"><span>Deep Drop Down</span> <i
+                class="bi bi-chevron-right"></i></a>
+            <div class="dropdown-container">
+              <div *ngIf="dis">
+
+          <li (click)="isToggleNav()"><a href="#">Deep Drop Down 1</a></li>
+          <li (click)="isToggleNav()"><a href="#">Deep Drop Down 2</a></li>
+          <li (click)="isToggleNav()"><a href="#">Deep Drop Down 3</a></li>
+          <li (click)="isToggleNav()"><a href="#">Deep Drop Down 4</a></li>
+          <li (click)="isToggleNav()"><a href="#">Deep Drop Down 5</a></li>
+        </div>
+  </div>
+  </li>
+  </div>
+
+  <li (click)="isToggleNav()"><a href="#">Drop Down 2</a></li>
+  <li (click)="isToggleNav()"><a href="#">Drop Down 3</a></li>
+  <li (click)="isToggleNav()"><a href="#">Drop Down 4</a></li>
+
+  </div>
+  </div>
+  </li>
+
+  <li (click)="isToggleNav()"><a routerLink="/contact" class="nav-link scrollto">Contact</a></li>
+  <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+
+  <i class="bi mobile-nav-toggle bi-x" (click)="isToggleNav()"></i></ul>
+  </nav>
+  </div>
+</header>
